@@ -2,7 +2,12 @@
 
 ## Procedures/Tasks
 
-- Task 1: Add the ability for users to change between light and dark mode
+### Task 1: Add the ability for users to change between light and dark mode
 - Added a theme toogle
 - Persisted the selected theme between browser sessions
 - Added a navbar
+
+### Task 2: Add the ability for companies to login (user Authentication)
+- Added login/signup pages
+- Persist user login status by checking for the current users session when they first load the application
+- Added a modal thet pops up while waiting for user logout to finish
