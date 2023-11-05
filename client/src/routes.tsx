@@ -1,10 +1,12 @@
-import { Navigate, RouteObject } from "react-router-dom"
-import { RootLayout } from "@/layouts/RootLayout"
-import { ErrorPage } from "@/pages/ErrorPage"
-import { TaskListPage } from "@/pages/tasks/TaskListPage"
-import { NewTaskPage } from "@/pages/tasks/NewTaskPage"
-import { NotFoundPage } from "@/pages/NotFoundPage"
-import { AuthLayout, LoginForm, SignupForm } from "@/features/authentication"
+import { Navigate, RouteObject } from "react-router-dom";
+import { RootLayout } from "@/layouts/RootLayout";
+import { ErrorPage } from "@/pages/ErrorPage";
+import { TaskListPage } from "@/pages/tasks/TaskListPage";
+import { NewTaskPage } from "@/pages/tasks/NewTaskPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
+import { AuthLayout, LoginForm, SignupForm } from "@/features/authentication";
+import { myJobListingsRoute } from "./pages/jobs/my-listings";
+import { NewJobListingPage } from "./pages/jobs/NewJobListingPage";
 
 export const routes: RouteObject[] = [
   {
@@ -26,10 +28,17 @@ export const routes: RouteObject[] = [
             ],
           },
           {
+            path: "jobs",
+            children: [
+              { path: "my-listings", ...myJobListingsRoute },
+              { path: "new", element: <NewJobListingPage /> },
+            ],
+          },
+          {
             element: <AuthLayout />,
             children: [
-              { path: 'login', element: <LoginForm />},
-              { path: 'signup', element: <SignupForm />},
+              { path: "login", element: <LoginForm /> },
+              { path: "signup", element: <SignupForm /> },
             ],
           },
           { path: "*", element: <NotFoundPage /> },
@@ -37,4 +46,4 @@ export const routes: RouteObject[] = [
       },
     ],
   },
-]
+];
