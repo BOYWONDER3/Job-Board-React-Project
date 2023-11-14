@@ -7,6 +7,7 @@ import { NotFoundPage } from "@/pages/NotFoundPage";
 import { AuthLayout, LoginForm, SignupForm } from "@/features/authentication";
 import { myJobListingsRoute } from "./pages/jobs/my-listings";
 import { NewJobListingPage } from "./pages/jobs/NewJobListingPage";
+import { editJobListingRoute } from "./pages/jobs/edit"
 
 export const routes: RouteObject[] = [
   {
@@ -32,6 +33,7 @@ export const routes: RouteObject[] = [
             children: [
               { path: "my-listings", ...myJobListingsRoute },
               { path: "new", element: <NewJobListingPage /> },
+              { path: ":id/edit", ...editJobListingRoute  },
             ],
           },
           {
