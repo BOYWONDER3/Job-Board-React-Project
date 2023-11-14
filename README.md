@@ -11,3 +11,9 @@
 - Added login/signup pages
 - Persist user login status by checking for the current users session when they first load the application
 - Added a modal thet pops up while waiting for user logout to finish
+
+### Task 3: Add the ability for authenticated users to create, edit, and delete job listings
+- Added My Listings page
+- Added New/Edit Listing forms
+- Added a preview of the job listing on the new/edit forms
+- Added the ability to delete listings 
