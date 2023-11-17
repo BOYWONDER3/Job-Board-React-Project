@@ -258,12 +258,12 @@ function getJobListingBadgeVariant(
 
 function sortJobListings(a: JobListing, b: JobListing) {
   if (a.expiresAt === b.expiresAt) {
-    return 0;
+    return 0; 
   } else if (a.expiresAt == null) {
     return -1;
   } else if (b.expiresAt == null) {
     return 1;
-  } else {
+  }else {
     return differenceInDays(a.expiresAt, b.expiresAt);
   }
 }
