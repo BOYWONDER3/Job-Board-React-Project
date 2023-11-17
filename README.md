@@ -17,3 +17,8 @@
 - Added New/Edit Listing forms
 - Added a preview of the job listing on the new/edit forms
 - Added the ability to delete listings 
+
+### Tak 4: Stripe Integeration 
+- Added the ability for users to pay to extend/publish job listings
+- Added an order confirmation page to direct users to after a successful payment
+- Added proper badges that display the status and time remaining on the my job listings page
