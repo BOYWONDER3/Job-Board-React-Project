@@ -43,3 +43,9 @@ export function createPublishPaymentIntent(
     .post<{ clientSecret: string}> (`/job-listings/${id}/create-publish-payment-intent`, { duration })
     .then((res) => res.data);
 }
+
+export function getAllPublishedListings() {
+  return baseApi
+    .get("/job-listings/published")
+    .then(res => z.array(jobListingSchema).parseAsync(res.data))
+}

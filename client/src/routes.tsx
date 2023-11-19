@@ -9,6 +9,7 @@ import { myJobListingsRoute } from "./pages/jobs/my-listings";
 import { NewJobListingPage } from "./pages/jobs/NewJobListingPage";
 import { editJobListingRoute } from "./pages/jobs/edit"
 import { orderCompleteRoute } from "./pages/jobs/order-completed";
+import { jobListingsIndexRoute } from "./pages/jobs/index";
 
 export const routes: RouteObject[] = [
   {
@@ -32,6 +33,7 @@ export const routes: RouteObject[] = [
           {
             path: "jobs",
             children: [
+              { index: true, ...jobListingsIndexRoute}, 
               { path: "my-listings", ...myJobListingsRoute },
               { path: "new", element: <NewJobListingPage /> },
               { path: ":id/edit", ...editJobListingRoute  },
