@@ -1,5 +1,5 @@
 import { loader } from "./loader";
-import { OrderCompletePage } from "./page";
+import { OrderCompletePage } from "./Page";
 
 export const orderCompleteRoute = {
   loader,
